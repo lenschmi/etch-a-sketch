@@ -1,0 +1,59 @@
+
+main{
+    margin-top: 40px;
+}
+
+p{
+    text-align: center;
+    font-family: Arial;
+    font-size: 30px;
+    margin: 15px 0 15px 0;
+}
+
+#etchasketch{
+    display:flex;
+    flex-direction:row;
+    width: 1400px;
+    margin: auto;
+}
+
+#controls{
+    margin: 0 30px 0 30px;
+}
+
+.button-set{
+    display:flex;
+    flex-direction:column;
+    border-color: black;
+    border-style: solid;
+}
+
+.control-button{
+    font-size: 22px;
+    margin: 15px 30px 15px 30px;
+    width: 150px;
+    cursor: pointer;
+}
+
+#clear{
+    margin-top: 30px;
+}
+
+#etch-display{
+    padding: 100px 70px 140px 70px;
+    background-color: rgb(184, 2, 2);  
+    border-radius: 40px;
+
+}
+
+#container{
+    display: grid;
+    border-color: black;
+    border-style: solid;
+}
+
+.grid-square{
+    border-color: black;
+    border-style: solid;
+    border-width:1px;
+}

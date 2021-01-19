@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Etch-a-Sketch</title>
+        <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    </head>
+    <body>
+        <main>
+            <div id="etchasketch">
+                <div id="controls">
+                    <p>Grid Size</p>
+                    <div class="button-set">
+                        <button id="small" class="control-button">Small</button>
+                        <button id="med" class="control-button">Medium</button>
+                        <button id="large" class="control-button">Large</button>
+                    </div>
+                    <p>Color Scheme</p>
+                    <div class="button-set">
+                        <button id="classic" class="control-button">Classic</button>
+                        <button id="rainbow" class="control-button">Rainbow</button>
+                        <button id="custom" class="control-button">Custom Color</button>
+                    </div>
+                    <button id="clear" class="control-button">Clear Grid</button>
+                </div>
+                <div id="etch-display">
+                    <div id="container">
+                        <!--Empty div to hold grid of square produced by EtchASketch.js-->
+                    </div>
+                </div> 
+            </div>
+        </main>
+        <script type="text/javascript" src="EtchASketch.js"></script>
+    </body>
+</html>
