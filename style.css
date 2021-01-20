@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster:200i,400&display=swap');
 
 main{
     margin-top: 40px;
@@ -8,6 +9,14 @@ p{
     font-family: Arial;
     font-size: 30px;
     margin: 15px 0 15px 0;
+}
+
+#title{
+    color: rgb(218,165,32);
+    font-family:"Lobster";
+    font-size: 70px;
+    text-align: center;
+    margin: 0;
 }
 
 #etchasketch{
@@ -35,12 +44,28 @@ p{
     cursor: pointer;
 }
 
+#custom{
+    display: flex;
+    flex-direction: row;
+}
+
+#custom-color{
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    cursor: pointer;
+}
+
+#custom-color:focus{
+    outline: none;
+}
+
 #clear{
     margin-top: 30px;
 }
 
 #etch-display{
-    padding: 100px 70px 140px 70px;
+    padding: 30px 70px 40px 70px;
     background-color: rgb(184, 2, 2);  
     border-radius: 40px;
 
@@ -50,10 +75,25 @@ p{
     display: grid;
     border-color: black;
     border-style: solid;
+    margin-bottom: 40px;
 }
 
 .grid-square{
     border-color: black;
     border-style: solid;
     border-width:1px;
+}
+
+#knobs{
+    display: flex;
+    justify-content: space-between;
+}
+
+.white-knobs{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: -3px 3px grey;
+    border: 2px solid grey;
 }

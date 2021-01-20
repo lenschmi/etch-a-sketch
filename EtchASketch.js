@@ -6,6 +6,16 @@ const width = 960;
 const height = 540;
 const defaultBackground = "rgb(212, 226, 240)";
 
+//Set-up color mode
+function randomColor(){
+    let rgbVal1 = Math.floor(Math.random() * 256);
+    let rgbVal2 = Math.floor(Math.random() * 256);
+    let rgbVal3 = Math.floor(Math.random() * 256);
+    return `rgb(${rgbVal1},${rgbVal2},${rgbVal3})`;
+}
+let customColor="";
+const colorModeEnum = Object.freeze({"classic":function(){return "black"}, "rainbow":randomColor, "custom":function(){return customColor}});
+let colorMode = colorModeEnum.classic;
 
 
 //Define grids
@@ -24,11 +34,7 @@ const medGrid = new gridDef(27, 48);
 const largeGrid = new gridDef(18, 32);
 let currGrid = largeGrid;
 
-function onHover(e){
-    const div = e.target;
-    div.style.background = "black";
-}
-
+//Grid manipulation functions
 function initGrid(){
     makeDivs(largeGrid.rows*largeGrid.columns);
     container.style.height = height;
@@ -78,37 +84,39 @@ function resizeGrid(grid)
     clearGrid();
 }
 
+//Define behaviour to call on mouseover event
+function onHover(e){
+    const div = e.target;
+    let color = colorMode();
+    div.style.background = color;
+}
+//Initialize grid
 initGrid();
+
 //Set up event listeners for the grid buttons
 const smallButton = document.querySelector("button#small");
-smallButton.addEventListener("click", function(e){
-    resizeGrid(smallGrid);
-});
+smallButton.addEventListener("click", function(e){resizeGrid(smallGrid)});
 const medButton = document.querySelector("button#med");
-medButton.addEventListener("click", function(e){
-    resizeGrid(medGrid);
-});
+medButton.addEventListener("click", function(e){resizeGrid(medGrid)});
 const largeButton = document.querySelector("button#large");
-largeButton.addEventListener("click", function(e){
-    resizeGrid(largeGrid);
-});
+largeButton.addEventListener("click", function(e){resizeGrid(largeGrid)});
+
 //Set up event listeners for color scheme
 const classicButton = document.querySelector("button#classic");
-classicButton.addEventListener("click", function(e){
-    
-});
+classicButton.addEventListener("click", function(e){colorMode = colorModeEnum.classic});
 const rainbowButton = document.querySelector("button#rainbow");
-rainbowButton.addEventListener("click", function(e){
-    
-});
+rainbowButton.addEventListener("click", function(e){colorMode = colorModeEnum.rainbow});
+
+//Set up event listener for color picker for custom color
 const customButton = document.querySelector("button#custom");
-customButton.addEventListener("click", function(e){
-    
+const colorInput = document.querySelector("input#custom-color");
+colorInput.addEventListener("change", function(e){
+    colorMode = colorModeEnum.custom;
+    customColor = e.target.value;
 });
+customButton.addEventListener("click", function(e){colorInput.click()});
 
 //Set up event listener for clear button
 const clearButton = document.querySelector("button#clear");
-clearButton.addEventListener("click", function(e){
-    clearGrid();
-});
+clearButton.addEventListener("click", function(e){clearGrid()});
 

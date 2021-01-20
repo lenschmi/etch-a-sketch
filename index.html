@@ -19,13 +19,19 @@
                     <div class="button-set">
                         <button id="classic" class="control-button">Classic</button>
                         <button id="rainbow" class="control-button">Rainbow</button>
-                        <button id="custom" class="control-button">Custom Color</button>
+                        <!--<label type="color">Custom Color</label>-->
+                        <button id="custom" class="control-button">Custom Color<input type="color" value="#000000" id="custom-color"></button>
                     </div>
                     <button id="clear" class="control-button">Clear Grid</button>
                 </div>
                 <div id="etch-display">
+                    <h1 id="title">Etch-a-Sketch</h1>
                     <div id="container">
                         <!--Empty div to hold grid of square produced by EtchASketch.js-->
+                    </div>
+                    <div id="knobs">
+                        <span class="white-knobs"></span>
+                        <span class="white-knobs"></span>
                     </div>
                 </div> 
             </div>
