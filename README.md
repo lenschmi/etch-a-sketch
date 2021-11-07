@@ -1,7 +1,5 @@
 # etch-a-sketch
-Etch-a-Sketch project for the Odin Project's Foundations path.
-
-This was mostly based on the project description found [HERE](https://www.theodinproject.com/courses/foundations/lessons/etch-a-sketch-project).
+[Etch-a-Sketch project](https://www.theodinproject.com/courses/foundations/lessons/etch-a-sketch-project) for the Odin Project's Foundations path.
 
 **Project Notes:**
 - The Etch-A-Sketch fills in a square in the grid on a mouseover event
