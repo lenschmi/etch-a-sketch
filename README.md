@@ -1,5 +1,8 @@
 # etch-a-sketch
-[Etch-a-Sketch project](https://www.theodinproject.com/courses/foundations/lessons/etch-a-sketch-project) for the Odin Project's Foundations path.
+[Etch-a-Sketch project](https://www.theodinproject.com/courses/foundations/lessons/etch-a-sketch-project) for the Odin Project's Foundations path. View [demo](https://lenschmi.github.io/etch-a-sketch/).
+
+![Etch-a-Sketch_Demo](https://user-images.githubusercontent.com/61850952/140662830-4d7ff3e9-73f0-4a36-9be6-9de6378f92f8.png)
+
 
 **Project Notes:**
 - The Etch-A-Sketch fills in a square in the grid on a mouseover event
